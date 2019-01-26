@@ -1,0 +1,56 @@
+#include<iostream.h>
+#include<process.h>
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+#include<fstream.h>
+#include<iomanip.h>
+class medical
+{
+public:
+char medname[20];
+char pharcomp[20];
+char add[20];
+char dopur[20];
+char doexp[20];
+long int phno;
+
+void getdata()
+{
+cout<<"enter medicine name=";
+cin>>medname;
+cout<<"enter company name=";
+cin>>pharcomp;
+cout<<"enter address of the company=";
+cin>>add;
+cout<<"enter date of purchase=";
+cin>>dopur;
+cout<<"enter date of expiry=";
+cin>>doexp;
+cout<<"enter phone number=";
+cin>>phno;
+}
+void putdata()
+{
+cout.setf(ios::left);
+cout<<setw(10)<<medname<<setw(10)<<pharcomp<<setw(15)<<add<<setw(8)<<dopur<<setw(8)<<doexp<<setw(10)<<phno<<endl;
+}};
+void main()
+{
+clrscr();
+char pass[10]="admin";
+char str[10];
+int i=0;
+char ch;
+
+gotoxy(19,10);
+cout<<"Enter Password";
+while((ch=getch())!='\r')
+{
+cout<<"*";
+str[i]=ch;
+i++;
+}
+str[i]='\0';
+int j;
+j=strcmp(str,pass);
